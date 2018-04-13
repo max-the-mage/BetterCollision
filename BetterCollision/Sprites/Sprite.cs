@@ -67,7 +67,7 @@ namespace BetterCollision.Sprites
             return Rect.Top + Velocity.Y < sprite.Rect.Bottom &&
                    Rect.Bottom > sprite.Rect.Bottom &&
                    Rect.Right > sprite.Rect.Left &&
-                   Rect.Left < sprite.Rect.Left;
+                   Rect.Left < sprite.Rect.Right;
         }
         #endregion
     }

@@ -71,7 +71,18 @@ namespace BetterCollision
 
             foreach(var sprite in _sprites)
             {
+
                 sprite.Update(gameTime, _sprites);
+
+                if (sprite.Rect.Left + sprite.Velocity.X > graphics.PreferredBackBufferWidth)
+                    sprite.Position.X = -sprite.Rect.Width + 1;
+                else if (sprite.Rect.Right + sprite.Velocity.X < 0)
+                    sprite.Position.X = graphics.PreferredBackBufferWidth - 1;
+
+                if (sprite.Rect.Top + sprite.Velocity.Y > graphics.PreferredBackBufferHeight)
+                    sprite.Position.Y = -sprite.Rect.Height + 1;
+                else if (sprite.Rect.Bottom + sprite.Velocity.Y < 0)
+                    sprite.Position.Y = graphics.PreferredBackBufferHeight - 1;
             }
 
             base.Update(gameTime);
