@@ -56,6 +56,10 @@ namespace BetterCollision
                     },
                     Position = new Vector2(100, 200),
                     Speed = 5f
+                },
+                new Sprite(playerTexture)
+                {
+                    Position = new Vector2(graphics.PreferredBackBufferWidth/2, graphics.PreferredBackBufferHeight/2)
                 }
             };
         }
@@ -74,6 +78,7 @@ namespace BetterCollision
 
                 sprite.Update(gameTime, _sprites);
 
+                // Screen Loop
                 if (sprite.Rect.Left + sprite.Velocity.X > graphics.PreferredBackBufferWidth)
                     sprite.Position.X = -sprite.Rect.Width + 1;
                 else if (sprite.Rect.Right + sprite.Velocity.X < 0)
