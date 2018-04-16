@@ -16,6 +16,8 @@ namespace BetterCollision.Sprites
         {
             Move();
 
+            // for every sprite, stop on collision
+            // with any of the other sprites
             foreach(var sprite in sprites)
             {
                 if (sprite == this)

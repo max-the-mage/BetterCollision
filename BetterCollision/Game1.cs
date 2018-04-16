@@ -31,6 +31,7 @@ namespace BetterCollision
 
             var playerTexture = Content.Load<Texture2D>("Cube");
 
+            // All game sprites, array for looping each sprite
             _sprites = new List<Sprite>()
             {
                 new Player(playerTexture)

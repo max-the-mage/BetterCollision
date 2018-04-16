@@ -13,7 +13,9 @@ namespace BetterCollision.Sprites
         public Color Colour = Color.White;
         public float Speed;
         public Input Input;
-
+        
+        // This is used for easily getting X and why positions of
+        // the edges of the texture (e.g. this.Rect.Left).
         public Rectangle Rect
         {
             get
